@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<Head>
+  <title>Practice codes</title>
+  <style>
+    .header{
+      background-color: rgb(221, 231, 227);
+      height: 60px;
+      border-style: solid;
+      border: 0px;
+      border-bottom-color: rgb(208, 107, 107);
+      border-bottom: 5px;
+      display: flex;
+      flex-direction: row;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+    }
+    .sidebar{
+      background-color: chocolate;
+      display: flex;
+      flex-direction: column;
+      width: 120px;
+      top: 60px;
+      left: 0;
+      bottom: 0;
+      position: fixed;
+    }
+    .body{
+      padding: 70px 10px 10px 130px;
+    }
+  </style>
+</Head>
+<Body class="body">
+  <Header class="header">
+    head section
+  </Header>
+
+</Body>
+  <section class="sidebar">
+    sidebar
+  </section>
+  <main>
+    <h1>User Input Element</h1>
+    <form action="action_page.php" method="post">
+      <div> <!--for radio buttons-->
+        <label for="title">Title: </label>
+
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mr." name="title" value="Mr.">
+        <label for="Mrs.">Mrs.</label>
+        <input type="radio" id="Mrs." name="title" value="Mrs.">
+        <label for="PhD.">PhD.</label>
+        <input type="radio" id="PhD." name="title" value="PhD.">
+<!--unless we put them under the same group(name), then all can be selected at once-->
+      </div>
+      <br>
+      <div>
+        <label for="Fname">First name:</label>
+        <input type="text" id="Fname" name="Fname" placeholder="Thor" required>
+      </div>
+        <br>
+      <div>
+        <label for="Lname">Last name:</label>
+        <input type="text" id="Lname" name="Lname" placeholder="Odinson" required>
+      </div>
+        <br>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="thor@OG.com" required>
+      </div>
+      <br>
+      <div>
+        <label for="pass">Password:</label>
+        <input type="password" id="pass" name="pass" maxlength="12" placeholder="****" required>
+      </div>
+        <br>
+      <div>
+        <label for="phone">Phone #:</label>
+        <input type="tel" id="phone" name="phone" placeholder="(260) 1234 5678">
+      </div>
+      <br>
+      <div>
+        <label for="bdate">Birth Date:</label>
+        <input type="date" id="bdate" name="bdate">
+      </div>
+      <br>
+      <div>
+        <label for="quantity">Quantity:</label>
+        <input type="number" id="quantity" name="quantity" min="0" max="99" value="1"> <!--default value will be 1-->
+      </div>
+      <br>
+      <div> <!--for dropdown menus its a little different-->
+        <label for="payment">Payment:</label>
+        <select name="payment" id="payment">
+          <option value="none">--none--</option>
+          <option value="Visa">Visa</option>
+          <option value="Mastercard">Mastercard</option>
+          <option value="Giftcard">Giftcard</option>
+        </select>
+      </div>
+      <br>
+      <div><!--for a checkbox-->
+        <label for="subscribe">Subscribe</label>
+        <input type="checkbox" id="subscribe" name="subscribe">
+      </div>
+      <br>
+      <input type="reset">
+      <input type="submit">
+    </form>
+
+
+  </main>
+
+
+</html>
